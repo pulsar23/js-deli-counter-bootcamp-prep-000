@@ -1,15 +1,14 @@
 var katzDeli = [];
+var lastnumber = 0;
 
 function takeANumber(katzDeli, customerName){
   //Returns customers position in katzDeliLine
   // Example:
   //  "Welcome, Ada.  You are number 1 in line."
-  //      **Do not return index ** 
-  katzDeli.push(customerName);
-  var arrayLength = katzDeli.length;
-  var string = [];
-  var cNum = arrayLength.toString();
-  string = "Welcome, " + customerName + ". You are number " + cNum + " in line.";
+  //      **Do not return index **
+  lastnumber = lastnumber +1;
+  katzDeli.push(lastnumber);
+  string = "Welcome, " + customerName + ". You are number " + lastnumber + " in line.";
       
   return string;
 }
